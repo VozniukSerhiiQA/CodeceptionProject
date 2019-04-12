@@ -8,7 +8,7 @@ class Url
 	 public static $Bikes = '/pl/en/shop/bikes/c/bikes';
 	 public static $Equipment = '/pl/en/shop/equipment/c/equipment';
 	 public static $SearchValue = '/pl/en/search/?text=test';
-	 
+	 public static $Roubaix = '/pl/en/roubaix';
 
 
 	 public static $ContactUs = '/pl/en/contact-us';

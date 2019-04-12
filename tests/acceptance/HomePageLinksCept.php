@@ -28,19 +28,21 @@ $I->amOnPage(URL::$Bikes);
 $I->click('Equipment');
 $I->amOnPage(URL::$Equipment);
 
-// Search
+// ******************************* S E A R C H
 $I->click(BtnLink::$SearchIcon);
 $I->seeElement(BtnLink::$SearchBox);
 $I->seeElement(['xpath' => BtnLink::$SearchBtn]);
 $I->click(BtnLink::$SearchBox);
-//$I->click('//div[@class=\'search-input-container\']');
 $I->fillField(INPUT::$SearchInputBox, 'Test');
-//$I->fillField('//input[@id=\'input_SearchBoxComponent\']', 'Test');
 $I->click(['xpath' => BtnLink::$SearchBtn]);
 $I->amOnPage(URL::$SearchValue);
 
 $I->click(TOP::$Logo);
 $I->amOnPage('/');
+
+// ******************************* B A N N E R
+$I->click(BtnLink::$ViewRoubaix);
+$I->amOnPage(URL::$Roubaix);
 
 // ******************************* F O O T E R
 $I->scrollTo(FOOTER::$ContactUs);
