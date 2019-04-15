@@ -4,6 +4,7 @@ use Objects\Url as URL;
 use Objects\Footer as FOOTER;
 use Objects\ButtonsAndLinks as BtnLink;
 use Objects\Inputs as INPUT;
+use Objects\ModalsPopups as MODAL;
 
 //################ Home page verification #####################################################
 $I = new AcceptanceTester($scenario);
@@ -43,6 +44,25 @@ $I->amOnPage('/');
 // ******************************* B A N N E R
 $I->click(BtnLink::$ViewRoubaix);
 $I->amOnPage(URL::$Roubaix);
+$I->moveBack();
+$I->seeElement(BtnLink::$ViewRoubaix);
+$I->click(BtnLink::$NextBanner); //skipping 2nd banner - this banner has issue for PL region(1st it shows as Сzech not as PL, 2nd issue - button does not have text)
+$I->seeElement(BtnLink::$NextBanner);
+$I->click(BtnLink::$NextBanner);
+$I->waitForElement(BtnLink::$SeeTheCollection);
+$I->seeElement(BtnLink::$SeeTheCollection);
+$I->click(BtnLink::$SeeTheCollection);
+$I->amOnPage(URL::$SeeTheCollection);
+$I->moveBack();
+$I->click(BtnLink::$NextBanner); //skipping 2nd banner - this banner has issue for PL region(1st it shows as Сzech not as PL, 2nd issue - button does not have text)
+$I->waitForElement(BtnLink::$NextBanner);
+$I->click(BtnLink::$NextBanner);
+$I->waitForElement(BtnLink::$WatchVideo);
+$I->seeElement(BtnLink::$WatchVideo);
+$I->clickWithLeftButton([ 'xpath' => BtnLink::$WatchVideo]);
+$I->seeElement(MODAL::$WatchVideoIframe);
+$I->seeElement(BtnLink::$WatchVideoCloseFrame);
+$I->click(BtnLink::$WatchVideoCloseFrame);
 
 // ******************************* F O O T E R
 $I->scrollTo(FOOTER::$ContactUs);

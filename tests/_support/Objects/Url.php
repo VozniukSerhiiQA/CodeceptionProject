@@ -16,5 +16,6 @@ class Url
 	 public static $BicycleRegistration = '/pl/en/bike';
 	 public static $SafetyNotifications = '/pl/en/safety-notices';
 	 public static $SuspensionCalculator = '/pl/en/suspension-calculator';
+	 public static $SeeTheCollection = '/pl/en/sagan-collection-3';
 	 
 }
