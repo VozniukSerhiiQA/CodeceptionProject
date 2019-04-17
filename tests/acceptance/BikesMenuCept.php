@@ -1,8 +1,6 @@
 <?php 
 use Objects\Top as TOP;
-// use Objects\Banners as BANNER;
 use Objects\ButtonsAndLinks as BtnLink;
-// use Objects\Footer as FOOTER;
 
 //################ Check Mega Menu ###############################
 $I = new AcceptanceTester($scenario);
