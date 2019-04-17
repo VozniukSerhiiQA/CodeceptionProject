@@ -47,7 +47,11 @@ class ButtonsAndLinks
 		   return $check_category;	
 		}
 	//---------------------------------------------------------------------------------------------------------
-
+		public function Breadcrumbs ($get_breadcrumb_name, $get_breadcrumb_number)
+		{
+		   $breadcrumb = "//span[contains(text(), '".$get_breadcrumb_name."')]/../../meta[@content='".$get_breadcrumb_number."']";
+		   return $breadcrumb;	
+		}
 
 
 }

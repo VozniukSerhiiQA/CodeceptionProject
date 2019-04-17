@@ -3,13 +3,14 @@ use Objects\Top as TOP;
 use Objects\Banners as BANNER;
 use Objects\ButtonsAndLinks as BtnLink;
 use Objects\Footer as FOOTER;
+use Objects\Url as URL;
 
 //################ Home page verification #####################################################
 $I = new AcceptanceTester($scenario);
 $I->wantTo('Test Home Page for PL region');
 $I->amOnPage('/');
 $I->maximizeWindow();
-$I->seeInCurrentUrl(TOP::$PL);
+$I->seeInCurrentUrl(URL::$PL);
 
 //********************* TOP Header ********************* 
 $I->see('Find a Retailer');

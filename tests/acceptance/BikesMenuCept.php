@@ -1,13 +1,14 @@
 <?php 
 use Objects\Top as TOP;
 use Objects\ButtonsAndLinks as BtnLink;
+use Objects\Url as URL;
 
 //################ Check Mega Menu ###############################
 $I = new AcceptanceTester($scenario);
-$I->wantTo('Test Home Page for PL region');
+$I->wantTo('Test Mega Menu');
 $I->amOnPage('/');
 $I->maximizeWindow();
-$I->seeInCurrentUrl(TOP::$PL);
+$I->seeInCurrentUrl(URL::$PL);
 
 //*************************** B I K E S **********************
 $I->see('Bikes');
