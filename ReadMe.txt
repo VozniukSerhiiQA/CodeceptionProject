@@ -8,3 +8,7 @@ To run tests on Work PC:
 select specifiyed test:
 php codecept.phar run acceptance HomePageCept.php --debug --html
 php codecept.phar run acceptance HomePageLinksCept.php --debug --html
+
+Environment variable:
+1) add path to folder with Web-driver
+2) add path to folder /php
