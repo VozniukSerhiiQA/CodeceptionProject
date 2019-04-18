@@ -47,11 +47,20 @@ class ButtonsAndLinks
 		   return $check_category;	
 		}
 	//---------------------------------------------------------------------------------------------------------
+		
+	//--------------------------------   B r e a d c r u m b s   ----------------------------------------------------------
 		public function Breadcrumbs ($get_breadcrumb_name, $get_breadcrumb_number)
 		{
 		   $breadcrumb = "//span[contains(text(), '".$get_breadcrumb_name."')]/../../meta[@content='".$get_breadcrumb_number."']";
 		   return $breadcrumb;	
 		}
+	//---------------------------------------------------------------------------------------------------------
 
-
+	//--------------------------------   PDP   ----------------------------------------------------------
+		public function PDPNavMenu ($get_pdp_nav)
+		{
+		   $pdp_nav_menu = "//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='".$get_pdp_nav."']";
+		   return $pdp_nav_menu;	
+		}
+	//---------------------------------------------------------------------------------------------------------
 }

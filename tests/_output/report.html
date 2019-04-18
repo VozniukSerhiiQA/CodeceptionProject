@@ -215,7 +215,7 @@
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (6.6s)</small></h1>
+ <h1>Codeception Results <small><span style="color: green">OK</span> (10.3s)</small></h1>
 
 
 
@@ -227,7 +227,7 @@
 </tr>   <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('1', this)"><span class="toggle">+</span>
-          <span class="quiet">OpenBikeCept &raquo;</span> Test Opening PDP <span style="color: #34495e; font-size: 70%;">6.62s</span></p>
+          <span class="quiet">OpenBikeCept &raquo;</span> Test Opening PDP <span style="color: #34495e; font-size: 70%;">10.32s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -273,6 +273,114 @@
 
       <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element in dom <span style="color: #732E81">&quot;//span[contains(text(), 'Mountain Bikes')]/../../meta[@content='2)']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I scroll to <span style="color: #732E81">&quot;//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I scroll to <span style="color: #732E81">&quot;//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//span[@class='js-plp-price']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab text from <span style="color: #732E81">&quot;//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//span[@class='js-plp-price']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>The price is equal to zł40,899.00</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab text from <span style="color: #732E81">&quot;//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//a[@class='product-list__name']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Bike name on PLP is S-Works Epic EVO</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab text from <span style="color: #732E81">&quot;//h1[@itemprop='name']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Bike name on PDP is S-Works Epic EVO</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Name should be the same = true</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I don't see element <span style="color: #732E81">&quot;//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='Overview']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I don't see element <span style="color: #732E81">&quot;//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='Technical Specifications']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I don't see element <span style="color: #732E81">&quot;//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='Geometry']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I scroll to <span style="color: #732E81">&quot;//h3[text()='Technical Specifications']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='Overview']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='Technical Specifications']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='Geometry']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//div[@class='container-fluid product__tabs-wrapper']/div/span[text()='Geometry']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//h3[text()='Geometry']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Crank Length']|/td[text()='170mm']|/../td[text()='175mm']|/../td[text()='175mm']|/../td[text()='175mm']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Stem Length']|/td[text()='60mm']|/../td[text()='75mm']|/../td[text()='75mm']|/../td[text()='75mm']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Seatpost Length']|/td[text()='361MM']|/../td[text()='441MM']|/../td[text()='441MM']|/../td[text()='441MM']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Saddle Width']|/td[text()='143mm']|/../td[text()='143mm']|/../td[text()='143mm']|/../td[text()='143mm']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Handlebar Width']|/td[text()='750mm']|/../td[text()='750mm']|/../td[text()='750mm']|/../td[text()='750mm']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Reach']|/td[text()='398mm']|/../td[text()='423mm']|/../td[text()='446mm']|/../td[text()='465mm']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Top Tube Length, Horizontal']|/td[text()='571mm']|/../td[text()='599mm']|/../td[text()='626mm']|/../td[text()='650mm']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//tbody/tr[@class='geometry-section__row-hover']/td[text()='Stack']|/td[text()='595mm']|/../td[text()='605mm']|/../td[text()='619mm']|/../td[text()='638mm']&quot;</span></td>
       </tr>
 
 
