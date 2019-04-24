@@ -64,27 +64,23 @@ $I->comment("On PLP swatches: $sumSwatchesPLP");
 $ArraySizesPDP = $I->grabMultiple(VERIFY::$PDPGetSizes);
 print_r($ArraySizesPDP);
 $QtySizesPDP = count($ArraySizesPDP);
-$I->comment("\n I see " .$QtySizesPDP. "element(s) in drop-down");
+$I->comment("\nI see " .$QtySizesPDP. " element(s) in drop-down");
 $minus = round(($QtySizesPDP - 01),2);
 print $minus;
-$I->comment("\n Last array number is: " .$minus);
+$I->comment("\nLast array number is: " .$minus);
 if ($minus==0) {
-	print "Display Something, if the Number is 0";
-	$var0= $ArraySizesPDP[0];
-	$I->comment("I see next value:\n".$var0);
+	$var= $ArraySizesPDP[0];
+	$I->comment("I see next value:\n"."- ".$var);
 }elseif ($minus==1){
-	$var0= $ArraySizesPDP[0];
-	$var1= $ArraySizesPDP[1];
-	$I->comment("I see next values:\n".$var0."\n".$var1);
+	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1]);
+	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]);
 }elseif ($minus==2){
-	$var0= $ArraySizesPDP[0];
-	$var1= $ArraySizesPDP[1];
-	$var2= $ArraySizesPDP[2];
-	$I->comment("I see next values:\n".$var0."\n".$var1."\n".$var2);
+	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1], $ArraySizesPDP[2]);
+	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]."\n"."- ".$var[2]);
 }elseif ($minus==3){
-	$var0= $ArraySizesPDP[0];
-	$var1= $ArraySizesPDP[1];
-	$var2= $ArraySizesPDP[2];
-	$var3= $ArraySizesPDP[3];
-	$I->comment("I see next values:\n".$var0."\n".$var1."\n".$var2."\n".$var3);
+	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1], $ArraySizesPDP[2], $ArraySizesPDP[3]);
+	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]."\n"."- ".$var[2]."\n"."- ".$var[3]);
+}elseif ($minus==4){
+	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1], $ArraySizesPDP[2], $ArraySizesPDP[3], $ArraySizesPDP[3]);
+	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]."\n"."- ".$var[2]."\n"."- ".$var[3]."\n"."- ".$var[4]);
 }
