@@ -60,3 +60,31 @@ $I->seeElement(VERIFY::GeometryCheck('Stack', '595mm','605mm','619mm','638mm'));
 $I->seeNumberOfElements(VERIFY::$QtyPDPColor, $sumSwatchesPLP);
 $I->comment("On PLP swatches: $sumSwatchesPLP");
 
+//Test with get sizes and verification on PHP
+$ArraySizesPDP = $I->grabMultiple(VERIFY::$PDPGetSizes);
+print_r($ArraySizesPDP);
+$QtySizesPDP = count($ArraySizesPDP);
+$I->comment("\n I see " .$QtySizesPDP. "element(s) in drop-down");
+$minus = round(($QtySizesPDP - 01),2);
+print $minus;
+$I->comment("\n Last array number is: " .$minus);
+if ($minus==0) {
+	print "Display Something, if the Number is 0";
+	$var0= $ArraySizesPDP[0];
+	$I->comment("I see next value:\n".$var0);
+}elseif ($minus==1){
+	$var0= $ArraySizesPDP[0];
+	$var1= $ArraySizesPDP[1];
+	$I->comment("I see next values:\n".$var0."\n".$var1);
+}elseif ($minus==2){
+	$var0= $ArraySizesPDP[0];
+	$var1= $ArraySizesPDP[1];
+	$var2= $ArraySizesPDP[2];
+	$I->comment("I see next values:\n".$var0."\n".$var1."\n".$var2);
+}elseif ($minus==3){
+	$var0= $ArraySizesPDP[0];
+	$var1= $ArraySizesPDP[1];
+	$var2= $ArraySizesPDP[2];
+	$var3= $ArraySizesPDP[3];
+	$I->comment("I see next values:\n".$var0."\n".$var1."\n".$var2."\n".$var3);
+}

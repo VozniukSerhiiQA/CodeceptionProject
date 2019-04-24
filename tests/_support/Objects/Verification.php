@@ -41,8 +41,6 @@ class Verification
 	}
 
 	public static $PDPGetSizes = "//select/option[not(text()='SIZE')]";
-	//select/option[not(text()='SIZE')]
-	//select/option[text()='S']
 //---------------!TODO-------------------------------------
 		
 }
