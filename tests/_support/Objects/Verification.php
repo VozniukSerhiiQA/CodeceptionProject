@@ -31,16 +31,14 @@ class Verification
 		   return $pdp_geometry_check;	
 	}
 
-	
-//---------- TODO ------------
-	//Get Size from froduct
-	public function PDPSizeName ($get_pdp_size_name)
-	{
-		   $pdp_size_text = "//h3[text()='".$get_pdp_size."']";
-		   return $pdp_size_text;	
-	}
+		//Verify Size name from froduct
+	// public function PDPSizeName ($get_pdp_size_name)
+	// {
+	// 	   $pdp_size_text = "//h3[text()='".$get_pdp_size."']";
+	// 	   return $pdp_size_text;	
+	// }
 
 	public static $PDPGetSizes = "//select/option[not(text()='SIZE')]";
-//---------------!TODO-------------------------------------
+//----------------------------------------------------
 		
 }
