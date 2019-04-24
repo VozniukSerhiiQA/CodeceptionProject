@@ -32,12 +32,11 @@ class Verification
 	}
 
 		//Verify Size name from froduct
-	// public function PDPSizeName ($get_pdp_size_name)
-	// {
-	// 	   $pdp_size_text = "//h3[text()='".$get_pdp_size."']";
-	// 	   return $pdp_size_text;	
-	// }
-
+	public function PDPSizeName ($get_pdp_size_name)
+	{
+		   $pdp_size_text = "//select/option[(text()='".$get_pdp_size_name."')]";
+		   return $pdp_size_text;	
+	}
 	public static $PDPGetSizes = "//select/option[not(text()='SIZE')]";
 //----------------------------------------------------
 		

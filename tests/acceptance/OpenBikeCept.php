@@ -71,16 +71,42 @@ $I->comment("\nLast array number is: " .$minus);
 if ($minus==0) {
 	$var= $ArraySizesPDP[0];
 	$I->comment("I see next value:\n"."- ".$var);
+	$I->moveMouseOver(VERIFY::PDPSizeName('SIZE'));
+	$I->clickWithLeftButton(VERIFY::PDPSizeName('SIZE'));
+	$I->see($var);
 }elseif ($minus==1){
 	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1]);
 	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]);
+	$I->moveMouseOver(VERIFY::PDPSizeName('SIZE'));
+	$I->clickWithLeftButton(VERIFY::PDPSizeName('SIZE'));
+	$I->see($var[0]);
+	$I->see($var[1]);
 }elseif ($minus==2){
 	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1], $ArraySizesPDP[2]);
 	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]."\n"."- ".$var[2]);
+	$I->moveMouseOver(VERIFY::PDPSizeName('SIZE'));
+	$I->clickWithLeftButton(VERIFY::PDPSizeName('SIZE'));
+	$I->see($var[0]);
+	$I->see($var[1]);
+	$I->see($var[2]);
 }elseif ($minus==3){
 	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1], $ArraySizesPDP[2], $ArraySizesPDP[3]);
 	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]."\n"."- ".$var[2]."\n"."- ".$var[3]);
+	$I->moveMouseOver(VERIFY::PDPSizeName('SIZE'));
+	$I->clickWithLeftButton(VERIFY::PDPSizeName('SIZE'));
+	$I->see($var[0]);
+	$I->see($var[1]);
+	$I->see($var[2]);
+	$I->see($var[3]);
+
 }elseif ($minus==4){
 	$var= array($ArraySizesPDP[0], $ArraySizesPDP[1], $ArraySizesPDP[2], $ArraySizesPDP[3], $ArraySizesPDP[3]);
 	$I->comment("I see next values:\n"."- ".$var[0]."\n"."- ".$var[1]."\n"."- ".$var[2]."\n"."- ".$var[3]."\n"."- ".$var[4]);
+	$I->moveMouseOver(VERIFY::PDPSizeName('SIZE'));
+	$I->clickWithLeftButton(VERIFY::PDPSizeName('SIZE'));
+	$I->see($var[0]);
+	$I->see($var[1]);
+	$I->see($var[2]);
+	$I->see($var[3]);
+	$I->see($var[4]);
 }
