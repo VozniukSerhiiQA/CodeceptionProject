@@ -4,6 +4,7 @@ use Objects\ButtonsAndLinks as BtnLink;
 use Objects\Url as URL;
 use Objects\Verification as VERIFY;
 use CollapsedSteps\PDPsize as COLLAPSED_STEPS_SIZE;
+use Objects\Inputs as INPUT;
 
 //################ Check Mega Menu ###############################
 $I = new AcceptanceTester($scenario);
@@ -24,26 +25,26 @@ $I->seeElementInDOM(BtnLink::Breadcrumbs('shop','0)'));
 $I->seeElementInDOM(BtnLink::Breadcrumbs('Bikes','1)'));
 $I->seeElementInDOM(BtnLink::Breadcrumbs('Mountain Bikes','2)'));
 
-$I->scrollTo(VERIFY::$Bike1st);
-$I->scrollTo(VERIFY::$GetPrice1stBike);
+$I->scrollTo(VERIFY::ItemIndexNumberOnPLP('1'));
+$I->scrollTo(VERIFY::PriceItemIndexNumberOnPLP('1'));
 
 //PLP getting price and name of 1st bike
-$PriceValue = $I->grabTextFrom(VERIFY::$GetPrice1stBike);
-$I->comment("The price is equal to " .$PriceValue);
-$BikeNamePLP = $I->grabTextFrom(VERIFY::$GetName1stBike);
-$I->comment("Bike name on PLP is " .$BikeNamePLP);
+$PriceValue = $I->grabTextFrom(VERIFY::PriceItemIndexNumberOnPLP('1'));
+$I->comment(">>>> \n \tThe price is equal to " .$PriceValue);
+$BikeNamePLP = $I->grabTextFrom(VERIFY::NameItemIndexNumberOnPLP('1'));
+$I->comment(">>>> \n \tBike name on PLP is " .$BikeNamePLP);
 
 //PLP checking swatches
 $PLPSwatchQty = $I->grabMultiple(VERIFY::$GetQtySwatches1stBike);
 $sumSwatchesPLP = count($PLPSwatchQty);
-$I->comment("On PLP swatches: $sumSwatchesPLP");
+$I->comment(">>>> \n \tOn PLP swatches: ".$sumSwatchesPLP);
 
 //Open 1st bike in PDP
 //Verify Bike's name the same on PDP as on PLP
-$I->click(VERIFY::$Bike1st);
+$I->click(VERIFY::ItemIndexNumberOnPLP('1'));
 $BikeNamePDP = $I->grabTextFrom(VERIFY::$GetNameBikePDP);
-$I->comment("Bike name on PDP is " .$BikeNamePDP);
-$I->comment("Name should be the same = " .($BikeNamePDP==$BikeNamePLP ? 'true' : 'false'));
+$I->comment(">>>> \n \tBike name on PDP is " .$BikeNamePDP);
+$I->comment(">>>> \n \tName should be the same = " .($BikeNamePDP==$BikeNamePLP ? '"\t True - Names are equal: $BikeNamePDP==$BikeNamePLP"' : 'false'));
 
 //Check float element is not displayed till page is not scrolled
 $I->dontSeeElement(BtnLink::PDPNavMenu('Overview'));
@@ -71,5 +72,27 @@ $I->seeElement(VERIFY::GeometryCheck('Stack', '595mm','605mm','619mm','638mm'));
 
 //Compare, do we see the same qty of swatches on PLP as on PDP
 $I->seeNumberOfElements(VERIFY::$QtyPDPColor, $sumSwatchesPLP);
-$I->comment("On PLP swatches: $sumSwatchesPLP");
+$I->comment(">>>> \n \tOn PLP swatches: ".$sumSwatchesPLP);
+
+//Testing Sizes from PDP
 COLLAPSED_STEPS_SIZE::Sizes($I);
+
+$I->click(TOP::$Logo);
+$I->amOnPage('/');
+
+//--------------------SEARCH Bike from PDP by Name via Search box----------
+$I->click(BtnLink::$SearchIcon);
+$I->seeElement(BtnLink::$SearchBox);
+$I->seeElement(['xpath' => BtnLink::$SearchBtn]);
+$I->click(BtnLink::$SearchBox);
+$I->fillField(INPUT::$SearchInputBox, $BikeNamePDP);
+$I->click(['xpath' => BtnLink::$SearchBtn]);
+$I->amOnPage(URL::SearchValue($BikeNamePDP));
+
+$PriceValueSRP = $I->grabTextFrom(VERIFY::PriceItemIndexNumberOnSRP('1'));
+$I->comment(">>>> \n \tBikes's price on SRP is " .$PriceValueSRP);
+$BikeNameSRP = $I->grabTextFrom(VERIFY::NameItemIndexNumberOnSRP('1'));
+$I->comment(">>>> \n \tBike's name on SRP is " .$BikeNameSRP);
+$I->comment(">>>> \n \tName should be the same = " .($BikeNameSRP==$BikeNamePLP ? "\t True - Names are equal: $BikeNameSRP=$BikeNamePLP " : 'FALSE - Names are NOT equal'));
+$I->comment(">>>> \n \tPrices should be the same = " .($PriceValueSRP==$PriceValue ? "\t True - Prices are equal: $PriceValueSRP=$PriceValue  " : 'FALSE - Prices are NOT equal'));
+$I->seeElementInDOM(BtnLink::Breadcrumbs($BikeNameSRP,'0)'));

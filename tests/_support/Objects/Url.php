@@ -8,7 +8,7 @@ class Url
 	public static $Login = '/pl/en/account/login';
 	public static $Bikes = '/pl/en/shop/bikes/c/bikes';
 	public static $Equipment = '/pl/en/shop/equipment/c/equipment';
-	public static $SearchValue = '/pl/en/search/?text=test';
+	//public static $SearchValue = '/pl/en/search/?text=test'; //not needed this steps - leaving here for a couple weeks.
 	public static $Roubaix = '/pl/en/roubaix';
 
 
@@ -19,5 +19,11 @@ class Url
 	public static $SuspensionCalculator = '/pl/en/suspension-calculator';
 	public static $SeeTheCollection = '/pl/en/sagan-collection-3';
 	public static $CountryMountainPLP = '/pl/en/shop/bikes/mountain-bikes/cross-country-mountain-bikes/c/mountaincrosscountry';
+
+	public function SearchValue ($get_value_from_user)
+	{
+		   $searc_value = "/pl/en/search/?text='".$get_value_from_user."'";
+		   return $searc_value;	
+	}
 	 
 }

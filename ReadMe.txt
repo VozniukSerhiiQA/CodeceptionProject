@@ -13,6 +13,6 @@ Environment variable:
 1) add path to folder with Web-driver
 2) add path to folder /php
 
-In follow link exist 2 tables with mapping to files. When new test is adding or extened you should olso map it on this file too.
-The file allow us to see usages of objects and extended steps to tests.
+In the following link exist 2 tables with mapping to files. When a new test is adding or extend you should also map it on this file too.
+The file allows us to see usages of objects and extended steps to tests.
 https://docs.google.com/spreadsheets/d/1cgXncCBLMcX8YSrhvFDbf-DiHIC8tv0OYPgctxEMpQ0/edit?usp=sharing

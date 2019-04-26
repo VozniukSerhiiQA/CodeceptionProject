@@ -4,10 +4,50 @@ namespace Objects;
 class Verification
 {
 //----------------------------- P L P ------------------------------------------
-	public static $Bike1st = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']";
-	public static $GetPrice1stBike = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//span[@class='js-plp-price']";
-	public static $GetName1stBike  = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//a[@class='product-list__name']";
+	//public static $Bike1st = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']";
+	//public static $GetPrice1stBike = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//span[@class='js-plp-price']";
+	//public static $GetName1stBike  = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//a[@class='product-list__name']";
+	
+	public function ItemIndexNumberOnPLP ($get_index_number_of_item)
+	{
+		   $plp_index_number = "//div[".$get_index_number_of_item."][@class='product-list__item col-sm-12 col-md-6 col-lg-4']";
+		   return $plp_index_number;	
+	}
+	public function PriceItemIndexNumberOnPLP ($get_index_number_of_item_for_price)
+	{
+		   $plp_index_number_price = "//div[".$get_index_number_of_item_for_price."][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//span[@class='js-plp-price']";
+		   return $plp_index_number_price;	
+	}
+	public function NameItemIndexNumberOnPLP ($get_index_number_of_item_for_name)
+	{
+		   $plp_index_number_name = "//div[".$get_index_number_of_item_for_name."][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//a[@class='product-list__name']";
+		   return $plp_index_number_name;	
+	}
+	
+
+
 	public static $GetQtySwatches1stBike  = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//div[contains(@class, 'swatches')]/ul/li";
+
+//----------------------------- S R P (search result page) --------------------------------------------
+	public function ItemIndexNumberOnSRP ($get_index_number_of_item)
+	{
+		   $srp_index_number = "//div[".$get_index_number_of_item."][@class='product-list__item col-lg-4 col-md-6 col-sm-6']";
+		   return $srp_index_number;
+	}	
+
+	public function PriceItemIndexNumberOnSRP ($get_index_number_of_item_for_price)
+	{
+		   $srp_index_number_price = "//div[".$get_index_number_of_item_for_price."][@class='product-list__item col-lg-4 col-md-6 col-sm-6']//span[@class='js-plp-price']";
+		   return $srp_index_number_price;	
+	}
+	public function NameItemIndexNumberOnSRP ($get_index_number_of_item_for_name)
+	{
+		   $srp_index_number_name = "//div[".$get_index_number_of_item_for_name."][@class='product-list__item col-lg-4 col-md-6 col-sm-6']//a[@class='product-list__name']";
+		   return $srp_index_number_name;	
+	}
+
+
+
 //------------------------------------------------------------------------------
 	
 
@@ -39,5 +79,4 @@ class Verification
 	}
 	public static $PDPGetSizes = "//select/option[not(text()='SIZE')]";
 //----------------------------------------------------
-		
 }
