@@ -4,9 +4,6 @@ namespace Objects;
 class Verification
 {
 //----------------------------- P L P ------------------------------------------
-	//public static $Bike1st = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']";
-	//public static $GetPrice1stBike = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//span[@class='js-plp-price']";
-	//public static $GetName1stBike  = "//div[1][@class='product-list__item col-sm-12 col-md-6 col-lg-4']//a[@class='product-list__name']";
 	
 	public function ItemIndexNumberOnPLP ($get_index_number_of_item)
 	{

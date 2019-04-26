@@ -8,7 +8,6 @@ class Url
 	public static $Login = '/pl/en/account/login';
 	public static $Bikes = '/pl/en/shop/bikes/c/bikes';
 	public static $Equipment = '/pl/en/shop/equipment/c/equipment';
-	//public static $SearchValue = '/pl/en/search/?text=test'; //not needed this steps - leaving here for a couple weeks.
 	public static $Roubaix = '/pl/en/roubaix';
 
 

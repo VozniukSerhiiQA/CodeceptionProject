@@ -4,6 +4,9 @@ use Objects\Verification as VERIFY;
 
 class PDPsize
 {
+
+
+
 	public static function Sizes (\AcceptanceTester $I)
     {
 		//Test regarding Bike's sizes:
@@ -59,6 +62,5 @@ class PDPsize
 				$I->see($var[3]);
 				$I->see($var[4]);
 			}
-    }
-		
+	}
 }

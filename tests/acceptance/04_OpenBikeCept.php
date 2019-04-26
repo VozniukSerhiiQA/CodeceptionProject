@@ -29,8 +29,8 @@ $I->scrollTo(VERIFY::ItemIndexNumberOnPLP('1'));
 $I->scrollTo(VERIFY::PriceItemIndexNumberOnPLP('1'));
 
 //PLP getting price and name of 1st bike
-$PriceValue = $I->grabTextFrom(VERIFY::PriceItemIndexNumberOnPLP('1'));
-$I->comment(">>>> \n \tThe price is equal to " .$PriceValue);
+$PriceValuePLP = $I->grabTextFrom(VERIFY::PriceItemIndexNumberOnPLP('1'));
+$I->comment(">>>> \n \tThe price is equal to " .$PriceValuePLP);
 $BikeNamePLP = $I->grabTextFrom(VERIFY::NameItemIndexNumberOnPLP('1'));
 $I->comment(">>>> \n \tBike name on PLP is " .$BikeNamePLP);
 
@@ -94,5 +94,5 @@ $I->comment(">>>> \n \tBikes's price on SRP is " .$PriceValueSRP);
 $BikeNameSRP = $I->grabTextFrom(VERIFY::NameItemIndexNumberOnSRP('1'));
 $I->comment(">>>> \n \tBike's name on SRP is " .$BikeNameSRP);
 $I->comment(">>>> \n \tName should be the same = " .($BikeNameSRP==$BikeNamePLP ? "\t True - Names are equal: $BikeNameSRP=$BikeNamePLP " : 'FALSE - Names are NOT equal'));
-$I->comment(">>>> \n \tPrices should be the same = " .($PriceValueSRP==$PriceValue ? "\t True - Prices are equal: $PriceValueSRP=$PriceValue  " : 'FALSE - Prices are NOT equal'));
+$I->comment(">>>> \n \tPrices should be the same = " .($PriceValueSRP==$PriceValuePLP ? "\t True - Prices are equal: $PriceValueSRP=$PriceValuePLP  " : 'FALSE - Prices are NOT equal'));
 $I->seeElementInDOM(BtnLink::Breadcrumbs($BikeNameSRP,'0)'));
